@@ -103,11 +103,14 @@ class _MyRegisterState extends State<MyRegister> {
                           Navigator.pushNamed(context, 'register');
                         },
                         child: Container(
-                          height: 50,
+                          height: 45,
                           width: 100,
                           color: Colors.white,
+                          padding: EdgeInsets.all(12.0),
+                          decoration: BoxDecoration(shape: BoxShape.circle),
                           child: const Text(
                             "Sign Up",
+                            textScaleFactor: 1.2,
                             style: TextStyle(
                                 color: Colors.black,
                                 letterSpacing: 1,

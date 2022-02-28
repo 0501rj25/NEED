@@ -20,9 +20,9 @@ class _MyLoginState extends State<MyLogin> {
         body: Stack(
           children: [
             Container(
-              padding: const EdgeInsets.only(left: 150, top: 150),
+              padding: const EdgeInsets.only(left: 20, top: 110),
               child: const Text(
-                "Login",
+                "Welcome\nBack...",
                 style: TextStyle(
                     color: Colors.orangeAccent,
                     fontSize: 40,
@@ -32,9 +32,9 @@ class _MyLoginState extends State<MyLogin> {
             SingleChildScrollView(
               child: Container(
                 padding: EdgeInsets.only(
-                    top: MediaQuery.of(context).size.height * 0.5,
-                    right: 25,
-                    left: 25),
+                    top: MediaQuery.of(context).size.height * 0.45,
+                    right: 20,
+                    left: 20),
                 child: Column(
                   children: [
                     TextField(
@@ -42,6 +42,7 @@ class _MyLoginState extends State<MyLogin> {
                         fillColor: Colors.grey.shade100,
                         filled: true,
                         hintText: "Email",
+                        labelText: "Email",
                         border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(10)),
                       ),
@@ -55,35 +56,36 @@ class _MyLoginState extends State<MyLogin> {
                         fillColor: Colors.grey.shade100,
                         filled: true,
                         hintText: "Password",
+                        labelText: "Password",
                         border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(10)),
                       ),
                     ),
-                    Padding(padding: EdgeInsets.only(top: 25)),
+                    Padding(padding: EdgeInsets.only(left: 20, top: 50)),
                     Row(
                       children: [
                         Text(
-                          "Sign In",
+                          "Sign in",
                           style: TextStyle(
-                              color: Colors.black,
+                              color: Color(0xff4c505b),
                               fontSize: 25,
                               fontWeight: FontWeight.bold),
                         ),
                         Padding(padding: EdgeInsets.only(right: 210)),
                         CircleAvatar(
-                          backgroundColor: Colors.black,
-                          radius: 25,
+                          backgroundColor: Color(0xff4c505b),
+                          radius: 30,
                           child: IconButton(
                             onPressed: () {
                               Navigator.pushNamed(context, 'home');
                             },
-                            icon: Icon(Icons.arrow_forward),
-                            color: Colors.white,
+                            icon: Icon(Icons.arrow_forward, size: 30),
+                            color: Colors.orangeAccent,
                           ),
                         ),
                       ],
                     ),
-                    SizedBox(height: 20),
+                    SizedBox(height: 70),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -95,7 +97,7 @@ class _MyLoginState extends State<MyLogin> {
                               "Sign Up",
                               style: TextStyle(
                                   decoration: TextDecoration.underline,
-                                  color: Colors.black,
+                                  color: Color(0xff4c505b),
                                   letterSpacing: 1,
                                   fontWeight: FontWeight.bold,
                                   fontSize: 15),
@@ -105,10 +107,10 @@ class _MyLoginState extends State<MyLogin> {
                               Navigator.pushNamed(context, 'forget');
                             },
                             child: Text(
-                              "Forget Password",
+                              "Forgot Password",
                               style: TextStyle(
                                   decoration: TextDecoration.underline,
-                                  color: Colors.black,
+                                  color: Color(0xff4c505b),
                                   letterSpacing: 1,
                                   fontWeight: FontWeight.bold,
                                   fontSize: 15),

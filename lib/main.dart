@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_need/login.dart';
-import 'package:flutter_need/register.dart';
-import 'forget.dart';
-import 'home.dart';
+import 'package:flutter_need/pages/login.dart';
+import 'package:flutter_need/pages/register.dart';
+import 'pages/forget.dart';
+import 'pages/home.dart';
 
 void main() {
   runApp(MaterialApp(

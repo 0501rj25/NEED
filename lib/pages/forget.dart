@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class MyRegister extends StatefulWidget {
-  const MyRegister({Key? key}) : super(key: key);
+class MyForget extends StatefulWidget {
+  const MyForget({Key? key}) : super(key: key);
 
   @override
-  _MyRegisterState createState() => _MyRegisterState();
+  _MyForgetState createState() => _MyForgetState();
 }
 
-class _MyRegisterState extends State<MyRegister> {
+class _MyForgetState extends State<MyForget> {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -20,9 +20,12 @@ class _MyRegisterState extends State<MyRegister> {
         body: Stack(
           children: [
             Container(
-              padding: const EdgeInsets.only(left: 125, top: 125),
+              padding: const EdgeInsets.only(
+                left: 20,
+                top: 80,
+              ),
               child: const Text(
-                "Sign Up",
+                "Forgot\nPassword...",
                 style: TextStyle(
                     color: Colors.orangeAccent,
                     fontSize: 40,
@@ -37,82 +40,69 @@ class _MyRegisterState extends State<MyRegister> {
                     left: 25),
                 child: Column(
                   children: [
-                    TextField(
-                      decoration: InputDecoration(
-                        fillColor: Colors.grey.shade100,
-                        filled: true,
-                        hintText: "Full Name",
-                        border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(10)),
-                      ),
-                    ),
                     SizedBox(
-                      height: 7,
+                      height: 10,
                     ),
                     TextField(
-                      obscureText: true,
-                      decoration: InputDecoration(
-                        fillColor: Colors.grey.shade100,
-                        filled: true,
-                        hintText: "Mobile No",
-                        border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(10)),
-                      ),
-                    ),
-                    SizedBox(
-                      height: 7,
-                    ),
-                    TextField(
-                      obscureText: true,
+                      //obscureText: true,
                       decoration: InputDecoration(
                         fillColor: Colors.grey.shade100,
                         filled: true,
                         hintText: "Email Id",
+                        labelText: "Email Id",
                         border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(10)),
                       ),
                     ),
                     SizedBox(
-                      height: 7,
+                      height: 10,
                     ),
                     TextField(
                       obscureText: true,
                       decoration: InputDecoration(
                         fillColor: Colors.grey.shade100,
                         filled: true,
-                        hintText: "Enter Password",
+                        hintText: "New Password",
+                        labelText: "New Password",
                         border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(10)),
                       ),
                     ),
                     SizedBox(
-                      height: 7,
+                      height: 10,
                     ),
                     TextField(
-                      obscureText: true,
+                      //obscureText: true,
                       decoration: InputDecoration(
                         fillColor: Colors.grey.shade100,
                         filled: true,
                         hintText: "Confirm Password",
+                        labelText: "Confirm Password",
                         border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(10)),
                       ),
                     ),
+                    SizedBox(height: 20),
                     TextButton(
                         onPressed: () {
-                          Navigator.pushNamed(context, 'register');
+                          Navigator.pushNamed(context, 'login');
                         },
                         child: Container(
                           height: 45,
-                          width: 100,
-                          color: Colors.white,
-                          padding: EdgeInsets.all(12.0),
-                          decoration: BoxDecoration(shape: BoxShape.circle),
+                          width: 200,
+                          //color: Colors.white,
+                          padding: EdgeInsets.all(10.0),
+                          decoration: BoxDecoration(
+                            color: Color(0xff4c505b),
+                            borderRadius:
+                                BorderRadius.all(Radius.circular(10.0)),
+                            border: Border.all(color: Colors.black, width: 1.0),
+                          ),
                           child: const Text(
-                            "Sign Up",
+                            "Reset Password",
                             textScaleFactor: 1.2,
                             style: TextStyle(
-                                color: Colors.black,
+                                color: Colors.orangeAccent,
                                 letterSpacing: 1,
                                 fontWeight: FontWeight.bold,
                                 fontSize: 15),

@@ -40,7 +40,7 @@ class _MyForgetState extends State<MyForget> {
                     left: 25),
                 child: Column(
                   children: [
-                    SizedBox(
+                    const SizedBox(
                       height: 10,
                     ),
                     TextField(
@@ -54,7 +54,7 @@ class _MyForgetState extends State<MyForget> {
                             borderRadius: BorderRadius.circular(10)),
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 10,
                     ),
                     TextField(
@@ -68,7 +68,7 @@ class _MyForgetState extends State<MyForget> {
                             borderRadius: BorderRadius.circular(10)),
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 10,
                     ),
                     TextField(
@@ -82,7 +82,7 @@ class _MyForgetState extends State<MyForget> {
                             borderRadius: BorderRadius.circular(10)),
                       ),
                     ),
-                    SizedBox(height: 20),
+                    const SizedBox(height: 20),
                     TextButton(
                         onPressed: () {
                           Navigator.pushNamed(context, 'login');
@@ -91,11 +91,11 @@ class _MyForgetState extends State<MyForget> {
                           height: 45,
                           width: 200,
                           //color: Colors.white,
-                          padding: EdgeInsets.all(10.0),
+                          padding: const EdgeInsets.all(10.0),
                           decoration: BoxDecoration(
-                            color: Color(0xff4c505b),
+                            color: const Color(0xff4c505b),
                             borderRadius:
-                                BorderRadius.all(Radius.circular(10.0)),
+                                const BorderRadius.all(Radius.circular(10.0)),
                             border: Border.all(color: Colors.black, width: 1.0),
                           ),
                           child: const Text(

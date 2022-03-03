@@ -8,77 +8,80 @@ class MyHome extends StatefulWidget {
 }
 
 class _MyHomeState extends State<MyHome> {
+  int currentIndex = 0;
+
   @override
   Widget build(BuildContext context) {
-    var borderRadius2 = const BorderRadius.only(
-        bottomLeft: Radius.circular(20), bottomRight: Radius.circular(20));
     return MaterialApp(
+      theme: ThemeData.dark(),
       home: Scaffold(
-        appBar: AppBar(
-          title: const Text("Need App"),
-          actions: <Widget>[
-            IconButton(
-              icon: const Icon(Icons.comment),
-              tooltip: 'Comment Icon',
-              onPressed: () {},
-            ),
-            IconButton(
-              icon: const Icon(Icons.settings),
-              tooltip: 'Setting Icon',
-              onPressed: () {},
-            ),
-          ],
-          backgroundColor: Colors.cyan[500],
-          leading: IconButton(
-            icon: const Icon(Icons.menu),
-            tooltip: 'Menu Icon',
-            onPressed: () {},
-          ),
-        ),
-        body: Padding(
-          padding: const EdgeInsets.all(10.0),
-          child: Column(
-            children: [
-              Container(
-                height: 150,
-                width: 400,
-                decoration: const BoxDecoration(
-                  color: Colors.black,
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.black,
-                      blurRadius: 5.0,
-                    ),
-                  ],
-                  image: DecorationImage(
-                      image: AssetImage('assets/blood.png'), fit: BoxFit.cover),
-                  borderRadius: BorderRadius.all(Radius.circular(10.0)),
-                ),
-              ),
-              const SizedBox(
-                height: 10,
-              ),
-              SingleChildScrollView(
-                child: Container(
-                  height: 150,
-                  width: 400,
-                  decoration: const BoxDecoration(
-                    color: Colors.black,
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.black,
-                        blurRadius: 5.0,
-                      ),
-                    ],
-                    image: DecorationImage(
-                        image: AssetImage('assets/blood2.jpg'),
-                        fit: BoxFit.cover),
-                    borderRadius: BorderRadius.all(Radius.circular(10.0)),
+        body: Row(
+          children: [
+            Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                Container(
+                  padding: const EdgeInsets.only(top: 50.0, left: 30.0),
+                  height: 100,
+                  width: MediaQuery.of(context).size.width,
+                  //color: Colors.amber,
+                  child: const Text(
+                    "Today\n ",
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 20.0,
+                        fontStyle: FontStyle.normal),
                   ),
                 ),
-              )
-            ],
-          ),
+              ],
+            )
+          ],
+        ),
+        bottomNavigationBar: BottomNavigationBar(
+          currentIndex: currentIndex,
+          onTap: (index) => setState(() => currentIndex = index),
+          elevation: 15.0,
+          type: BottomNavigationBarType.fixed,
+          backgroundColor: Colors.grey.shade900,
+          selectedItemColor: Colors.white,
+          unselectedItemColor: Colors.white54,
+          selectedIconTheme:
+              const IconThemeData(size: 30.0, color: Colors.cyan),
+          unselectedIconTheme:
+              const IconThemeData(size: 20.0, color: Colors.white),
+          items: const [
+            BottomNavigationBarItem(
+              icon: Icon(
+                Icons.home,
+              ),
+              label: 'Home',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(
+                Icons.shopping_bag,
+              ),
+              label: 'Shop',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(
+                Icons.directions_run,
+              ),
+              label: 'Activity',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(
+                Icons.favorite,
+              ),
+              label: 'Favorites',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(
+                Icons.settings,
+              ),
+              label: 'Settings',
+            ),
+          ],
         ),
       ),
       debugShowCheckedModeBanner: false,

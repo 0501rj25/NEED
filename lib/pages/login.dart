@@ -47,7 +47,7 @@ class _MyLoginState extends State<MyLogin> {
                             borderRadius: BorderRadius.circular(10)),
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 20,
                     ),
                     TextField(
@@ -61,31 +61,31 @@ class _MyLoginState extends State<MyLogin> {
                             borderRadius: BorderRadius.circular(10)),
                       ),
                     ),
-                    Padding(padding: EdgeInsets.only(left: 20, top: 50)),
+                    const Padding(padding: EdgeInsets.only(left: 20, top: 50)),
                     Row(
                       children: [
-                        Text(
+                        const Text(
                           "Sign in",
                           style: TextStyle(
                               color: Color(0xff4c505b),
                               fontSize: 25,
                               fontWeight: FontWeight.bold),
                         ),
-                        Padding(padding: EdgeInsets.only(right: 210)),
+                        const Padding(padding: EdgeInsets.only(right: 210)),
                         CircleAvatar(
-                          backgroundColor: Color(0xff4c505b),
+                          backgroundColor: const Color(0xff4c505b),
                           radius: 30,
                           child: IconButton(
                             onPressed: () {
                               Navigator.pushNamed(context, 'home');
                             },
-                            icon: Icon(Icons.arrow_forward, size: 30),
+                            icon: const Icon(Icons.arrow_forward, size: 30),
                             color: Colors.orangeAccent,
                           ),
                         ),
                       ],
                     ),
-                    SizedBox(height: 70),
+                    const SizedBox(height: 70),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -93,7 +93,7 @@ class _MyLoginState extends State<MyLogin> {
                             onPressed: () {
                               Navigator.pushNamed(context, 'register');
                             },
-                            child: Text(
+                            child: const Text(
                               "Sign Up",
                               style: TextStyle(
                                   decoration: TextDecoration.underline,
@@ -106,7 +106,7 @@ class _MyLoginState extends State<MyLogin> {
                             onPressed: () {
                               Navigator.pushNamed(context, 'forget');
                             },
-                            child: Text(
+                            child: const Text(
                               "Forgot Password",
                               style: TextStyle(
                                   decoration: TextDecoration.underline,

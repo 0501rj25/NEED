@@ -12,7 +12,7 @@ void main() {
       'login': (context) => const MyLogin(),
       'register': (context) => const MyRegister(),
       'home': (context) => const MyHome(),
-      'forget': (context) => const MyForget()
+      'forget': (context) => const MyForget(),
     },
   ));
 }

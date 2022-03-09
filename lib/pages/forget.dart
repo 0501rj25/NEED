@@ -84,31 +84,32 @@ class _MyForgetState extends State<MyForget> {
                     ),
                     const SizedBox(height: 20),
                     TextButton(
-                        onPressed: () {
-                          Navigator.pushNamed(context, 'login');
-                        },
-                        child: Container(
-                          height: 45,
-                          width: 200,
-                          //color: Colors.white,
-                          padding: const EdgeInsets.all(10.0),
-                          decoration: BoxDecoration(
-                            color: const Color(0xff4c505b),
-                            borderRadius:
-                                const BorderRadius.all(Radius.circular(10.0)),
-                            border: Border.all(color: Colors.black, width: 1.0),
-                          ),
-                          child: const Text(
-                            "Reset Password",
-                            textScaleFactor: 1.2,
-                            style: TextStyle(
-                                color: Colors.orangeAccent,
-                                letterSpacing: 1,
-                                fontWeight: FontWeight.bold,
-                                fontSize: 15),
-                            textAlign: TextAlign.center,
-                          ),
-                        )),
+                      onPressed: () {
+                        Navigator.pushNamed(context, 'login');
+                      },
+                      child: Container(
+                        height: 45,
+                        width: 200,
+                        //color: Colors.white,
+                        padding: const EdgeInsets.all(10.0),
+                        decoration: BoxDecoration(
+                          color: const Color(0xff4c505b),
+                          borderRadius:
+                              const BorderRadius.all(Radius.circular(10.0)),
+                          border: Border.all(color: Colors.black, width: 1.0),
+                        ),
+                        child: const Text(
+                          "Reset Password",
+                          textScaleFactor: 1.2,
+                          style: TextStyle(
+                              color: Colors.orangeAccent,
+                              letterSpacing: 1,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 15),
+                          textAlign: TextAlign.center,
+                        ),
+                      ),
+                    ),
                   ],
                 ),
               ),

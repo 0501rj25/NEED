@@ -1,4 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_need/pages/home_bottom.dart';
+import 'package:flutter_need/pages/settings.dart';
+import 'package:flutter_need/pages/shop.dart';
+import 'activity.dart';
+import 'favorites.dart';
 
 class MyHome extends StatefulWidget {
   const MyHome({Key? key}) : super(key: key);
@@ -8,39 +13,25 @@ class MyHome extends StatefulWidget {
 }
 
 class _MyHomeState extends State<MyHome> {
-  int currentIndex = 0;
+  //int currentItem = 0;
+  var bottomData = [
+    const MyHomeBottom(),
+    const MyShop(),
+    const MyActivity(),
+    const MyFavorites(),
+    const MySettings()
+  ];
+  int selectedItem = 0;
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData.dark(),
       home: Scaffold(
-        body: Row(
-          children: [
-            Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                Container(
-                  padding: const EdgeInsets.only(top: 50.0, left: 30.0),
-                  height: 100,
-                  width: MediaQuery.of(context).size.width,
-                  //color: Colors.amber,
-                  child: const Text(
-                    "Today\n ",
-                    style: TextStyle(
-                        color: Colors.white,
-                        fontWeight: FontWeight.bold,
-                        fontSize: 20.0,
-                        fontStyle: FontStyle.normal),
-                  ),
-                ),
-              ],
-            )
-          ],
+        body: Center(
+          child: bottomData[selectedItem],
         ),
         bottomNavigationBar: BottomNavigationBar(
-          currentIndex: currentIndex,
-          onTap: (index) => setState(() => currentIndex = index),
           elevation: 15.0,
           type: BottomNavigationBarType.fixed,
           backgroundColor: Colors.grey.shade900,
@@ -82,6 +73,12 @@ class _MyHomeState extends State<MyHome> {
               label: 'Settings',
             ),
           ],
+          currentIndex: selectedItem,
+          onTap: (setValue) {
+            setState(() {
+              selectedItem = setValue;
+            });
+          },
         ),
       ),
       debugShowCheckedModeBanner: false,

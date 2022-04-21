@@ -201,7 +201,7 @@ class _MyHomeBottomState extends State<MyHomeBottom> {
                             width: 160,
                             decoration: BoxDecoration(
                               border: Border.all(width: 2.0),
-                              color: Colors.amber,
+                              color: Colors.blueGrey,
                               borderRadius: BorderRadius.circular(15),
                               boxShadow: const [
                                 BoxShadow(
@@ -219,7 +219,7 @@ class _MyHomeBottomState extends State<MyHomeBottom> {
                             width: 160,
                             decoration: BoxDecoration(
                               border: Border.all(width: 2.0),
-                              color: Colors.amber,
+                              color: Colors.lightBlue,
                               borderRadius: BorderRadius.circular(15),
                               boxShadow: const [
                                 BoxShadow(
@@ -241,7 +241,7 @@ class _MyHomeBottomState extends State<MyHomeBottom> {
                             width: 160,
                             decoration: BoxDecoration(
                               border: Border.all(width: 2.0),
-                              color: Colors.amber,
+                              color: Colors.orangeAccent,
                               borderRadius: BorderRadius.circular(15),
                               boxShadow: const [
                                 BoxShadow(
@@ -259,7 +259,7 @@ class _MyHomeBottomState extends State<MyHomeBottom> {
                             width: 160,
                             decoration: BoxDecoration(
                               border: Border.all(width: 2.0),
-                              color: Colors.amber,
+                              color: Colors.grey,
                               borderRadius: BorderRadius.circular(15),
                               boxShadow: const [
                                 BoxShadow(
@@ -270,6 +270,29 @@ class _MyHomeBottomState extends State<MyHomeBottom> {
                             ),
                           ),
                         ],
+                      ),
+                    ),
+                    Container(
+                      padding: const EdgeInsets.only(left: 30, top: 20),
+                      height: 300,
+                      width: MediaQuery.of(context).size.width,
+                      child: RichText(
+                        text: TextSpan(
+                          style: Theme.of(context).textTheme.bodyLarge,
+                          children: const [
+                            WidgetSpan(
+                              child: Padding(
+                                padding: EdgeInsets.symmetric(horizontal: 2.0),
+                                child: Icon(Icons.wine_bar),
+                              ),
+                            ),
+                            TextSpan(
+                              text: 'Recent Trophies',
+                              style: TextStyle(
+                                  fontWeight: FontWeight.bold, fontSize: 20.0),
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                   ],
